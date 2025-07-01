@@ -10,7 +10,7 @@ const userBlog = require('./routes/blog');
 const Blog = require('./models/blog');
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 connectDB(process.env.MONGOSH_URL)
     .then(() => console.log('Connected to DB'))
