@@ -4,12 +4,23 @@
 <head>
     <%- include('./partials/head') %>
         <title>Signin</title>
+        <style>
+            .responsive-box {
+                width: 80vw;
+            }
+        
+            @media (min-width: 768px) {
+                .responsive-box {
+                    width: 40vw;
+                }
+            }
+        </style>
 </head>
 
 <body>
     <%- include('./partials/scripts') %>
         <%- include('./partials/navbar') %>
-            <div class="border rounded w-25 p-4 mt-4 ms-4">
+            <div class="responsive-box border rounded p-4 m-auto mt-4">
                 <% if (typeof error !== 'undefined' && error) { %>
                 <div class="alert alert-danger">
                     <%= error %>
